@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
+	<!-- aop적용하기 -->
+	<!-- aspect bean 등록하기 -->
+	<bean id="loggerAspect" class="com.mermaid.spring.common.aop.LoggerAspect" />
+	
+	<!-- aop설정하기 -->
+	<aop:config>
+		<aop:aspect ref="loggerAspect">
+			<!-- <aop:pointcut expression="execution(* com.kh.spring.memo..*(..))" id="loggerTest" /> -->
+			<aop:pointcut expression="execution(* com.mermaid.spring.member..*(..))" id="loggerTest" />
+			<!-- <aop:before method="before" pointcut-ref="loggerTest"/> -->
+			<aop:around method="logAdvice" pointcut-ref="loggerTest" />
+		</aop:aspect>
+	</aop:config>
+	
+	<!-- 어노테이션 적용하기 -->
+	<!-- annotation-driven 태그와 비슷하게 어노테이션만으로 bean 등록시킬 수  있게 하는 역할-->
+	<aop:aspectj-autoproxy />
+</beans>
