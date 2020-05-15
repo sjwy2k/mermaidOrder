@@ -1,0 +1,162 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: 'system_font';
+  font-style: normal;
+  font-weight: normal;
+  src: url(../fonts/AppleSDGothicNeoR00-01.woff2) format('woff2'),
+  url(../fonts/AppleSDGothicNeoR00-01.woff) format('woff'),
+  local('system_font');
+}
+
+html, body {
+  margin: 0;
+}
+#nav{
+	height:90px;
+	background-color:#04A967;
+}
+.section{
+	color:#8B4F1D;
+}
+.footer{
+	background-color:#04A967;
+	height:80px;
+}
+
+.value-proposition{
+	background-color:white;
+}
+
+a {
+  color: #00F2E5;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.navbar, .navbar-bg {
+  height: 84px;
+}
+
+.content{
+  	margin: auto;
+  	width: 100%;
+}
+
+.logo {
+  width:80px;
+  height:80px;
+  object-fit: contain;
+  border: none;
+}
+
+.tab {
+  font-family: AppleSDGothicNeo;
+  font-size: 18px;
+  letter-spacing: 0.9px;
+  text-align: center;
+  color: #086A87;
+}
+
+a.tab { color: #0b1a84; font-weight:normal; }
+
+a.tab:hover {
+  color: white;
+  text-decoration: none;
+}
+
+.h100{
+	height:768px;
+}
+
+.title {
+  font-size: 60px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 3px;
+  text-align: center;
+  color: #086A87;
+}
+
+.text {
+  
+  font-size: 22px;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.82;
+  letter-spacing: normal;
+  text-align: center;
+  color: #086A87;
+}
+
+
+/* bottom */
+.bottom {
+  top: 4000px;
+  width: 100%;
+  height: 230px;
+  z-index: -1;
+}
+
+*[class*="bottom-col"] {
+  background-color: #ebebeb;
+  top: 4000px;
+  font-family: AppleSDGothicNeo;
+  font-size: 15px;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: left;
+  color: #9b9b9b;
+}
+
+*[class*="bottom-col"] .bold {
+  font-weight: 500;
+}
+
+*[class*="bottom"] a {
+  color: #9b9b9b ;
+}
+
+.bottom-col0 {
+  right: 50%;
+  padding-right: 410px;
+}
+
+.bottom-col1 {
+  right: 50%;
+  padding-right: 97px;
+}
+
+.bottom-col2 {
+  left: 50%;
+  padding-left: 88px;
+}
+
+.bottom-col3 {
+  left: 50%;
+  padding-left: 410px;
+}
+
+.bottom-bar {
+  top: 3000px;
+  width: 940px;
+  height: 1px;
+  background-color: #979797;
+}
+
+.bottom-info {
+  margin: auto;
+  font-size: 11px;
+  letter-spacing: 0.2px;
+  color:silver;
+}
+

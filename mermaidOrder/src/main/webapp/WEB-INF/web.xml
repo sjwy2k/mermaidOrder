@@ -28,7 +28,7 @@
 		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
-		
+
 	<servlet-mapping>
 		<servlet-name>appServlet</servlet-name>
 		<url-pattern>/</url-pattern>
@@ -49,7 +49,7 @@
 	
 	<error-page>
 		<exception-type>java.lang.Exception</exception-type>
-		<location>/WEB-INF/views/common/mermaidError.jsp</location>
+		<location>/WEB-INF/views/common/myError.jsp</location>
 	</error-page>
 	
 	<welcome-file-list>
