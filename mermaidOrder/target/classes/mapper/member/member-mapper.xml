@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="member">
-	<select id="selectMember" resultMap="memberMap" parameterType="member">
+<!-- 	<resultMap type="member" id="memberMap">
+		<result column="hobby" property="hobby" typeHandler="arrayType"/>
+	</resultMap>
+	<select id="selectMember" resultMap="member" parameterType="member">
 		SELECT * FROM MEMBER
-	</select>
+	</select> -->
 </mapper>

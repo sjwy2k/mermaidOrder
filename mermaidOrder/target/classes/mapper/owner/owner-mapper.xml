@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="owner">
+	<!-- typeHandler에 doublequotation 넣지 않는 것에 주의! -->
+	<insert id="insertOwner" parameterType="owner">
+		INSERT INTO OWNER VALUES(
+			OWNER_SEQ.NEXTVAL
+			, #{id}
+			, #{password}
+			)
+	</insert>
+	<resultMap type="owner" id="ownerMap">
+	</resultMap>
+	<select id="selectOwner" resultType="owner" parameterType="owner">
+		SELECT * FROM OWNER WHERE id=#{id}
+	</select>
+	<update id="updateOwner" parameterType="owner">
+		UPDATE OWNER SET PASSWORD=#{password} WHERE ID=#{id}
+	</update>
+	<delete id="deleteOwner" parameterType="owner">
+		DELETE FROM OWNER WHERE ID=#{id}
+	</delete>
+</mapper>

@@ -25,7 +25,7 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
 		<!-- favicon.ico -->
-		<meta property="og:url" content="https://localhost:9090/mermaid">
+		<meta property="og:url" content="${path}/resources/">
 		<link rel="apple-touch-icon" sizes="180x180" href="${path}/resources/img/mermaid.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="${path}/resources/img/mermaid.png">
 		<link rel="icon" type="image/png" sizes="16x16" href="${path}/resources/img/mermaid.png">
@@ -1674,9 +1674,9 @@
 			margin-top: 4px
 		}
 		
-		.list-notice   span {
+		.list-notice span {
 			color: #b5a396;
-			font-size: 15px;
+			font-size: 13px;
 			font-weight: 500;
 			margin-top: 3.5px
 		}
@@ -1826,13 +1826,11 @@
 		
 		.takeout-select {
 			position: relative;
-			margin-left: -15px;
-			margin-right: -15px;
-			padding: 0 15px;
+			padding: 0px 15px;
 			overflow: hidden
 		}
 		
-		.takeout-select   .select {
+		.takeout-select .select {
 			height: 45px;
 			display: inline-block;
 			width: 40%;
@@ -1840,19 +1838,19 @@
 			vertical-align: middle
 		}
 		
-		.takeout-select   .select.last {
+		.takeout-select .select.last {
 			padding: 10px 0 10px 10%;
 			text-align: center
 		}
 		
-		.takeout-select   .select   img {
+		.takeout-select .select img {
 			width: 19px;
 			height: 19px;
-			padding: 12px 3px 11px 0;
+			margin-top:10px;
 			line-height: 2.1
 		}
 		
-		.takeout-select   .select   .text {
+		.takeout-select .select .text {
 			line-height: 2.1;
 			margin-left: 5px;
 			margin-top: 1px;
@@ -2260,10 +2258,23 @@
 			<img src="${path}/resources/img/btn_mypage.png" style="width:60px;height:60px;"
 				onclick="">
 		</div>
-		<div class="market row border" style="padding-bottom: 15px; background-color: #04A967;">
+		<div class="row border search">
+		    <select name="searchType">
+		      <%-- <option value="n"<c:out value="${scri.searchType == null ? 'selected' : ''}"/>>-----</option>
+		      <option value="t"<c:out value="${scri.searchType eq 't' ? 'selected' : ''}"/>>점포</option>
+		      <option value="t"<c:out value="${scri.searchType eq 't' ? 'selected' : ''}"/>></option> --%>
+		      <option value="nonselect"<c:out value="" />>-----</option>
+		      <!-- 소유하는 점포 숫자만큼 반복문 -->
+		      <option value="store"<c:out value="" />>점포1</option>
+		      <option value="store"<c:out value="" />>점포2</option>
+		    </select>
+		    <input type="text" name="keyword" id="keywordInput" value=""/>
+		    <button id="searchBtn" type="button">검색</button>
+		</div>
+		<div class="market-nav row border" style="padding-bottom: 15px; background-color: #04A967;">
 			<div class="img-text">
-				<div class="market-info">
-					<div class="market-image">
+				<div class="market-nav-info">
+					<div class="market-nav-image">
 						<img class="cursor" src="${path}/resources/img/index.jpg" alt="커피점로고">
 					</div>
 					<div class="text">
@@ -2271,7 +2282,7 @@
 						<div class="desc">카페</div>
 					</div>
 				</div>
-				<div class="market-select cursor">매장변경 &gt;</div>
+				<!-- <div class="market-nav-select cursor">매장변경 &gt;</div> -->
 			</div>
 		</div>
 		<div class="row">

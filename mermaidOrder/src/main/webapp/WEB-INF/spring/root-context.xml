@@ -10,7 +10,7 @@
 	<!-- Root Context: defines shared resources visible to all other web components -->
 	<bean id="realDataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
 		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver" />
-		<property name="url" value="jdbc:oracle:thin:@localhost:1521:xe" />
+		<property name="url" value="jdbc:oracle:thin:@rclass.iptime.org:1521:xe" />
 		<property name="username" value="mermaid" />
 		<property name="password" value="mermaid" />
 	</bean>
@@ -57,7 +57,7 @@
 		<aop:advisor advice-ref="txAdvice" pointcut-ref="serviceMethod"/>
 	</aop:config>
 	
-	<!-- <bean id="encryptor" class="com.mermaid.spring.common.encryptor.AESEncrypt">
+	<bean id="encryptor" class="com.mermaid.spring.common.encryptor.AESEncrypt">
 		<constructor-arg index="0" value="c:\dev\" />
-	</bean>	 -->
+	</bean>	
 </beans>

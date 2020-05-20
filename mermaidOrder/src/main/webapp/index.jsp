@@ -32,7 +32,7 @@
 			</div>
 			<div class="row mt-5">
 				<div class="col-4"></div>
-				<img class="col-4 order" src="${path}/mermaid/resources/img/orderButton.png" style="cursor:pointer;" onclick="location.href='${path}/mermaid/order';">
+				<img class="col-4 order" src="${path}/mermaid/resources/img/orderButton.png" style="cursor:pointer;" onclick="javascript:order();">
 				<div class="col-4"></div>
 			</div>
 		</div>
@@ -52,7 +52,7 @@
 			</div>
 			<div class="row mt-5">
 				<div class="col-4"></div>
-				<img class="col-4 join" src="${path}/mermaid/resources/img/joinButton.png" style="cursor:pointer;">
+				<img class="col-4 join" src="${path}/mermaid/resources/img/joinButton.png" style="cursor:pointer;" onclick="location.href='${path}/mermaid/owner';">
 				<div class="col-4"></div>
 			</div>
 		</div>
@@ -64,10 +64,15 @@
 	          $.scrollTo(this.hash || 0, 500);
 	          e.preventDefault();
 	        });
-	        $('.join').click(function(){
-	        	alert('점주 관리 페이지로 이동');
-	        });
 	      });
+		function order(){
+			var phone=prompt("고객님의 전화번호를 입력해 주세요", "하이픈'-' 없이 입력해주세요 예)01012345678");
+			if(phone.length>9&&!isEmpty(phone)){
+				location.href='${path}/mermaid/owner?phone='+phone;
+			} else {
+				alert('올바른 전화번호를 입력해 주세요');
+			}
+		}
 	</script>
 </div>
 <jsp:include page="/WEB-INF/views/common/footer.jsp"/>

@@ -138,14 +138,14 @@ input::placeholder {
 	color: #ff1818
 }
 
-.background-fixed, .market-background-fixed {
+.background-fixed, .market-nav-background-fixed {
 	position: fixed;
 	width: 100%;
 	height: 100%;
 	background-color: #fff
 }
 
-.market-container {
+.market-nav-container {
 	position: relative
 }
 
@@ -184,25 +184,25 @@ input::placeholder {
 	}
 }
 
-.market.happy-hour {
+.market-nav.happy-hour {
 	margin: 10px 0 0
 }
 
-.market .img-text {
+.market-nav .img-text {
 	display: flex
 }
 
-.market .img-text .market-info {
+.market-nav .img-text .market-nav-info {
 	display: flex;
 	width: 78%;
 	
 }
 
-.market .img-text .market-info .market-image {
+.market-nav .img-text .market-nav-info .market-nav-image {
 	margin-left: 10px
 }
 
-.market .img-text .market-info .market-image img {
+.market-nav .img-text .market-nav-info .market-nav-image img {
 	margin: 15px 0 0 10px;
 	vertical-align: top;
 	float: right;
@@ -213,28 +213,28 @@ input::placeholder {
 	border-radius: 28.5px
 }
 
-.market .img-text .market-info .text {
+.market-nav .img-text .market-nav-info .text {
 	display: inline-block;
 	margin: 22px 0 0 10px;
 	height: 50px;
 	width: 75%
 }
 
-.market .img-text .market-info .text, .market .img-text .market-info .text * {
+.market-nav .img-text .market-nav-info .text, .market-nav .img-text .market-nav-info .text * {
 	color: #b5a396;
 	text-overflow: ellipsis;
 	white-space: nowrap;
 	
 }
 
-.market .img-text .market-info .text .name {
+.market-nav .img-text .market-nav-info .text .name {
 	color: #4a4a4a;
 	font-size: 20px;
 	font-weight: 700;
 	line-height: 28px
 }
 
-.market .img-text .market-info .text .market-icon {
+.market-nav .img-text .market-nav-info .text .market-nav-icon {
 	margin: 5px 0 0 15px;
 	width: 15px;
 	height: 15px;
@@ -243,7 +243,7 @@ input::placeholder {
 	border-radius: 7.5px
 }
 
-.market .img-text .market-info .text .desc {
+.market-nav .img-text .market-nav-info .text .desc {
 	color: #4c4c4c;
 	font-size: 12px;
 	font-weight: 300;
@@ -252,7 +252,7 @@ input::placeholder {
 	opacity: .7
 }
 
-.market .img-text .market-select {
+.market-nav .img-text .market-nav-select {
 	position: absolute;
 	right: 5px;
 	font-size: 13px;
@@ -261,13 +261,13 @@ input::placeholder {
 	padding: 28px 10px 20px 20px
 }
 
-.market .hashtag {
+.market-nav .hashtag {
 	margin: -5px 24px 0 14px;
 	max-height: 51px;
 	
 }
 
-.market .hashtag .item {
+.market-nav .hashtag .item {
 	height: 18px;
 	margin: 5px 0 0 10px;
 	display: inline-block;
@@ -278,7 +278,7 @@ input::placeholder {
 	background-color: #fff
 }
 
-.market.kiosk {
+.market-nav.kiosk {
 	position: fixed;
 	top: 0;
 	margin-top: 0;
@@ -353,7 +353,7 @@ input::placeholder {
 }
 
 @media all and (max-width:450px) {
-	.market {
+	.market-nav {
 		margin: 10px 0 23px
 	}
 	.menu-item .text .name {
@@ -419,7 +419,7 @@ input::placeholder {
 	margin: 0
 }
 
-.container-fluid .title, .market-container .title {
+.container-fluid .title, .market-nav-container .title {
 	height: 22px;
 	padding: 5px 0 5px 50px;
 	width: 80%;
@@ -427,7 +427,7 @@ input::placeholder {
 	font-size: 14px
 }
 
-.container-fluid .subtitle, .market-container .subtitle {
+.container-fluid .subtitle, .market-nav-container .subtitle {
 	height: 41px;
 	padding: 0 0 36px 25px;
 	color: #786253;

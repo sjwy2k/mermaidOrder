@@ -24,7 +24,7 @@
 	<meta property="og:description" content="쉽고 빠른 주문. 모든 매장용 사이렌오더">
 	<meta property="og:image" content="${path}/resources/img/mermaid.png" alt="로고영역">
 	<!-- favicon.ico -->
-	<meta property="og:url" content="https://localhost:9090/mermaid">
+	<meta property="og:url" content="${path}/resources/">
 	<link rel="apple-touch-icon" sizes="180x180" href="${path}/resources/img/mermaid.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="${path}/resources/img/mermaid.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="${path}/resources/img/mermaid.png">
