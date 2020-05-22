@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Owner {
 	
-	private int ownerno;
+	private int ownerNo;
 	private String id;
 	private String password;
 }

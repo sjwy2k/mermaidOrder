@@ -4,5 +4,6 @@
 	<typeAliases>
 		<typeAlias type="com.mermaid.spring.member.model.vo.Member" alias="member"/>
 		<typeAlias type="com.mermaid.spring.owner.model.vo.Owner" alias="owner"/>
+		<typeAlias type="com.mermaid.spring.store.model.vo.Store" alias="store"/>
 	</typeAliases>
 </configuration>

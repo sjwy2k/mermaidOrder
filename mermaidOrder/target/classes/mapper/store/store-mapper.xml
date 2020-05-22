@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="store">
+	<insert id="insertStore" parameterType="store">
+		INSERT INTO STORE VALUES(
+			STORE_SEQ.NEXTVAL
+			, #{ownerNo}
+			, #{storeName}
+			, #{storeType}
+		)
+	</insert>
+	<select id="selectListStore" resultType="map" parameterType="store">
+		<!-- SELECT * FROM STORE WHERE OWNERNO=#{ownerNo} ORDER BY STORENO DESC -->
+		SELECT * FROM (
+			SELECT A.*, ROWNUM AS RNUM FROM (
+				SELECT * FROM STORE WHERE OWNERNO=#{ownerNo} ORDER BY STORENO DESC
+			) A)
+	</select>
+	<select id="selectStoreCount" resultType="_int" parameterType="store">
+		SELECT COUNT(*) FROM STORE WHERE OWNERNO=#{ownerNo}
+	</select>
+	
+	<select id="selectListAll" resultType="map" parameterType="owner">
+		SELECT * FROM STORE WHERE OWNERNO=${ownerNo}
+	</select>
+	
+	<update id="updateStore" parameterType="store">
+		UPDATE STORE SET STORENAME=#{storeName}, STORETYPE=#{storeType} WHERE STORENO=#{storeNo} AND OWNERNO=#{ownerNo}
+	</update>
+	<delete id="deleteStore" parameterType="store">
+		DELETE FROM STORE WHERE STORENO=#{storeNo} AND OWNERNO=#{ownerNo}
+	</delete>
+</mapper>

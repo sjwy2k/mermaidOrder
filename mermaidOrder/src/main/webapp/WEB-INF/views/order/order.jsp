@@ -518,7 +518,7 @@
 			.story.component {
 				height: 400px;
 				overflow: hidden;
-				margin: 0 0 25px 20px;
+				margin: 2% 0 3% 4%;
 				padding-top: 12px;
 				box-shadow: 0 4px 10px 4px rgba(0, 0, 0, .15);
 				border-radius: 13px
@@ -2103,7 +2103,7 @@
 		}
 		
 		.story {
-			width: 367.40000000000003px;
+			width: 600px;
 			margin-right: 0px;
 			float: left;
 		}
@@ -2253,23 +2253,25 @@
 <body>
 	<div class="container-fluid">
 		<div class="navbar row border">
-			<img class="logo cursor" src="${path }/resources/img/mermaid.png" style="width:80px;height:80px;"
-				onclick="location.href='${path}'">
-			<img src="${path}/resources/img/btn_mypage.png" style="width:60px;height:60px;"
-				onclick="">
-		</div>
-		<div class="row border search">
-		    <select name="searchType">
-		      <%-- <option value="n"<c:out value="${scri.searchType == null ? 'selected' : ''}"/>>-----</option>
-		      <option value="t"<c:out value="${scri.searchType eq 't' ? 'selected' : ''}"/>>점포</option>
-		      <option value="t"<c:out value="${scri.searchType eq 't' ? 'selected' : ''}"/>></option> --%>
-		      <option value="nonselect"<c:out value="" />>-----</option>
-		      <!-- 소유하는 점포 숫자만큼 반복문 -->
-		      <option value="store"<c:out value="" />>점포1</option>
-		      <option value="store"<c:out value="" />>점포2</option>
-		    </select>
-		    <input type="text" name="keyword" id="keywordInput" value=""/>
-		    <button id="searchBtn" type="button">검색</button>
+			<div class="col-1">
+				<img class="logo cursor" src="${path }/resources/img/mermaid.png" style="width:80px;height:80px;"
+					onclick="location.href='${path}'">
+			</div>
+			<div class="col-1 opencart count ml-auto">
+				<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 512 512" style="width:50px;height:50px;">
+				  <g>
+				    <g>
+				      <path d="m464.5,301.1l36.5-178h-359.7l-12.5-59.2-108.4-52.9-9.4,18.7 99,47.8 50,238.8h289c0,0 28.5,17.9 17.5,40.5-4.9,7-12.5,15.6-26.1,15.6h-287.6v20.6h287.7c19.8,0 36.5-10.4 45.9-27 18.4-34.4-21.9-64.9-21.9-64.9zm-286.7-5.7l-32.3-151.6h330.5l-31.3,151.6h-266.9z"/>
+				      <path d="m212.2,422.1c-21.9,0-39.6,17.6-39.6,39.4s17.7,39.4 39.6,39.4 39.6-17.6 39.6-39.4-17.7-39.4-39.6-39.4zm0,58.1c-10.4,0-18.8-8.3-18.8-18.7s8.3-18.7 18.8-18.7 18.8,8.3 18.8,18.7-8.4,18.7-18.8,18.7z"/>
+				      <path d="m424.9,422.1c-21.9,0-39.6,17.6-39.6,39.4s17.7,39.5 39.6,39.5 40.7-17.6 39.6-39.4c0-21.8-17.7-39.5-39.6-39.5zm18.8,39.5c0,10.4-8.3,18.7-18.8,18.7s-18.8-8.3-18.8-18.7 8.3-18.7 18.8-18.7 19.8,8.3 18.8,18.7z"/>
+				    </g>
+				  </g>
+				</svg>
+			</div>
+			<div class="col-1">
+				<img class="" src="${path}/resources/img/btn_mypage.png" style="width:60px;height:60px;"
+					onclick="location.href='${path}/owner';">
+			</div>
 		</div>
 		<div class="market-nav row border" style="padding-bottom: 15px; background-color: #04A967;">
 			<div class="img-text">
@@ -2285,10 +2287,19 @@
 				<!-- <div class="market-nav-select cursor">매장변경 &gt;</div> -->
 			</div>
 		</div>
-		<div class="row">
-			<button class="col-1 opencart">
-				<span class="count">1</span><span class="suffix">개</span>
-			</button>
+		<div class="row border search">
+		    <select class="col-3" name="searchType">
+		      <%-- <option value="n"<c:out value="${scri.searchType == null ? 'selected' : ''}"/>>-----</option>
+		      <option value="t"<c:out value="${scri.searchType eq 't' ? 'selected' : ''}"/>>점포</option>
+		      <option value="t"<c:out value="${scri.searchType eq 't' ? 'selected' : ''}"/>></option> --%>
+		      <option value="nonselect"<c:out value="" />>-----</option>
+		      <!-- 소유하는 점포 숫자만큼 반복문 -->
+		      <option value="store"<c:out value="" />>점포1</option>
+		      <option value="store"<c:out value="" />>점포2</option>
+		    </select>
+		    <input class="col-6" type="text" name="keyword" id="keywordInput" value=""/>
+		    <button class="col-2" id="searchBtn" type="button">검색</button>
+			
 		</div>
 		<div class="stories component row border">
 			<div class="story component menu single-column component" id="">

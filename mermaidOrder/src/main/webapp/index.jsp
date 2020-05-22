@@ -10,7 +10,7 @@
 			</div>
 			<div class="row">
 				<div class="col-4"></div>				
-				<img class="col-4" src="${path}/mermaid/resources/img/coffee.jpg" style="width:100%;object-fit:cover;height:300px;">
+				<img class="col-4" src="${path}/20AM_mermaidOrder_final/resources/img/coffee.jpg" style="width:100%;object-fit:cover;height:300px;">
 				<div class="col-4"></div>				
 			</div>
 			<div class="row">
@@ -32,7 +32,7 @@
 			</div>
 			<div class="row mt-5">
 				<div class="col-4"></div>
-				<img class="col-4 order" src="${path}/mermaid/resources/img/orderButton.png" style="cursor:pointer;" onclick="javascript:order();">
+				<img class="col-4 order" src="${path}/20AM_mermaidOrder_final/resources/img/orderButton.png" style="cursor:pointer;" onclick="javascript:order();">
 				<div class="col-4"></div>
 			</div>
 		</div>
@@ -52,12 +52,12 @@
 			</div>
 			<div class="row mt-5">
 				<div class="col-4"></div>
-				<img class="col-4 join" src="${path}/mermaid/resources/img/joinButton.png" style="cursor:pointer;" onclick="location.href='${path}/mermaid/owner';">
+				<img class="col-4 join" src="${path}/20AM_mermaidOrder_final/resources/img/joinButton.png" style="cursor:pointer;" onclick="location.href='${path}/20AM_mermaidOrder_final/owner';">
 				<div class="col-4"></div>
 			</div>
 		</div>
 	</div>
-	<script src="${path}/mermaid/resources/js/jquery.scrollTo.js"></script>
+	<script src="${path}/20AM_mermaidOrder_final/resources/js/jquery.scrollTo.js"></script>
 	<script>
 		$(function(){
 	        $('.nav-item> .tab').click(function(e){
@@ -67,8 +67,8 @@
 	      });
 		function order(){
 			var phone=prompt("고객님의 전화번호를 입력해 주세요", "하이픈'-' 없이 입력해주세요 예)01012345678");
-			if(phone.length>9&&!isEmpty(phone)){
-				location.href='${path}/mermaid/owner?phone='+phone;
+			if(phone.length>9){
+				location.href='${path}/20AM_mermaidOrder_final/order?phone='+phone;
 			} else {
 				alert('올바른 전화번호를 입력해 주세요');
 			}

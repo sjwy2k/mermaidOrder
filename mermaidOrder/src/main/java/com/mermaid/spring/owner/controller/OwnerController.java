@@ -164,6 +164,7 @@ public class OwnerController {
 		m.addAttribute("loc", loc);
 		return "common/msg";
 	}
+	
 	@RequestMapping("/owner/ownerDeleteEnd.do")
 	public String ownerRemove(Owner owner, SessionStatus status, Model m) {
 		Owner loginOwner=service.selectOwner(owner);
@@ -193,17 +194,6 @@ public class OwnerController {
 		return "common/msg";
 	}
 	
-	@RequestMapping("/owner/checkUserId.do")
-	public void checkUserId(Owner owner, HttpServletResponse res) {
-		Owner check=service.selectOwner(owner);
-		try {
-			//check가 null이 아니면 중복되므로 사용불가 false
-			res.getOutputStream().print(check!=null?false:true); 
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-	}
-	
 	@RequestMapping("/owner/idDuplicateCheck")
 	public ModelAndView idDuplicateCheck(Owner owner, ModelAndView mav) {
 		Owner check=service.selectOwner(owner);
@@ -216,27 +206,5 @@ public class OwnerController {
 				
 		return mav;
 	}
-
-	/*
-	 * @RequestMapping("/owner/checkUserIdJsonView.do") public ModelAndView
-	 * checkUserIdJsonView(Owner owner, ModelAndView mav) { Owner
-	 * check=service.selectOwner(owner);
-	 * 
-	 * logger.debug(""+mav.getModel());
-	 * 
-	 * mav.addObject("owner",check); mav.addObject("flag",check!=null?false:true);
-	 * mav.setViewName("jsonView"); return mav; }
-	 */
-	
-	
-//	  @RequestMapping("/member/checkUserIdJackson.do")
-//	  @ResponseBody 
-//	  public List<Board> checkUserIdJackson(Owner owner) { 
-//		  Owner check=service.selectMember(owner); 
-//		  Map<String,Object> map=new HashMap<String,Object>(); 
-//		  map.put("flag",check!=null?false:true); 
-//		  List<Board> list=serviceBoard.selectBoard(1, 5);
-//		  return list; 
-//	  }
 	 
 }

@@ -57,7 +57,5 @@
 		<aop:advisor advice-ref="txAdvice" pointcut-ref="serviceMethod"/>
 	</aop:config>
 	
-	<bean id="encryptor" class="com.mermaid.spring.common.encryptor.AESEncrypt">
-		<constructor-arg index="0" value="c:\dev\" />
-	</bean>	
+	<bean id="encryptor" class="com.mermaid.spring.common.encryptor.AESEncrypt"></bean>	
 </beans>
